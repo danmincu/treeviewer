@@ -79,10 +79,6 @@
     <Compile Include="Tree\TreeList.cs" />
     <Compile Include="Tree\TreeListItem.cs" />
     <Compile Include="Tree\TreeNode.cs" />
-    <Page Include="Tabs\MainDemo.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -105,11 +101,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tabs\NodeModel.cs" />
-    <Compile Include="Tabs\MainDemo.xaml.cs">
-      <DependentUpon>MainDemo.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Tabs\Node.cs" />
+    <Compile Include="NodeModel.cs" />
+    <Compile Include="Node.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
