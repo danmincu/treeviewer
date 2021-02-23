@@ -1,12 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 
 
 namespace TestApp
 {
-	public class Node
+    public class Node
 	{
 		private readonly ObservableCollection<Node> _children = new ObservableCollection<Node>();
 		public ObservableCollection<Node> Children

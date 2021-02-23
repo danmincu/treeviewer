@@ -1,11 +1,10 @@
 using System;
-using System.Windows.Controls;
 using System.Windows;
 using System.Windows.Data;
 using System.Globalization;
 
 
-namespace Aga.Controls.Tree
+namespace TestApp.Tree
 {
     /// <summary>
     /// Convert Level to left margin

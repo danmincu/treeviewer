@@ -1,14 +1,13 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Collections.Specialized;
 
-namespace Aga.Controls.Tree
+namespace TestApp.Tree
 {
-	public sealed class TreeNode : INotifyPropertyChanged
+    public sealed class TreeNode : INotifyPropertyChanged
 	{
 		#region NodeCollection
 		private class NodeCollection : Collection<TreeNode>

@@ -72,9 +72,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Collection.cs" />
+    <Compile Include="Tree\Converters.cs" />
+    <Compile Include="Tree\ITreeModel.cs" />
+    <Compile Include="Tree\RowExpander.cs" />
+    <Compile Include="Tree\TreeList.cs" />
+    <Compile Include="Tree\TreeListItem.cs" />
+    <Compile Include="Tree\TreeNode.cs" />
     <Page Include="Tabs\MainDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="TreeStyles.xaml">
       <SubType>Designer</SubType>
@@ -105,25 +116,12 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\data.png" />
-    <Resource Include="Images\folder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\dataString.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dept.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Aga.Controls\Aga.Controls.csproj">
-      <Project>{d17cd489-1b14-47eb-8c22-c189d078aec9}</Project>
-      <Name>Aga.Controls</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

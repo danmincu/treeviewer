@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Collections.Specialized;
 
-namespace Aga.Controls
+namespace TestApp
 {
-	public class ObservableCollectionAdv<T> : ObservableCollection<T>
+    public class ObservableCollectionAdv<T> : ObservableCollection<T>
 	{
 		public void RemoveRange(int index, int count)
 		{
