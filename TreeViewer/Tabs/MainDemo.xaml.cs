@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Aga.Controls.Tree;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Aga.Controls.Tree;
 
 namespace TestApp
 {
@@ -44,5 +33,28 @@ namespace TestApp
 				_treeList.SelectedNode.IsExpanded = true;
 			}
 		}
-	}
+
+        private void Toggle_Click_All(object sender, RoutedEventArgs e)
+        {
+			foreach (var node in _treeList.SelectedNodes)
+            {
+				Expand(node);
+            }
+		}
+
+		private TreeNode Expand(TreeNode node)
+        {
+			if (node.IsExpandable)
+				node.IsExpanded = true;//!node.IsExpanded;
+
+            foreach (var item in node.AllVisibleChildren)
+            {
+				Expand(item);
+            }
+
+			return node;
+
+        }
+
+    }
 }

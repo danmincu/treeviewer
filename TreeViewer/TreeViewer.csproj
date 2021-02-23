@@ -76,10 +76,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Tabs\RegistrySample.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="TreeStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -99,7 +95,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Tabs\NodeModel.cs" />
-    <Compile Include="Tabs\RegImageConverter.cs" />
     <Compile Include="Tabs\MainDemo.xaml.cs">
       <DependentUpon>MainDemo.xaml</DependentUpon>
     </Compile>
@@ -107,17 +102,7 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Tabs\RegistryModel.cs" />
-    <Compile Include="Tabs\RegistrySample.xaml.cs">
-      <DependentUpon>RegistrySample.xaml</DependentUpon>
-    </Compile>
     <AppDesigner Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Aga.Controls\Aga.Controls.csproj">
-      <Project>{D17CD489-1B14-47EB-8C22-C189D078AEC9}</Project>
-      <Name>Aga.Controls</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\data.png" />
@@ -133,6 +118,12 @@
     <None Include="dept.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Aga.Controls\Aga.Controls.csproj">
+      <Project>{d17cd489-1b14-47eb-8c22-c189d078aec9}</Project>
+      <Name>Aga.Controls</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

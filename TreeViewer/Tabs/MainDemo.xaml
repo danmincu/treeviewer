@@ -4,19 +4,16 @@
 	xmlns:tree="clr-namespace:Aga.Controls.Tree;assembly=Aga.Controls">
 
     <DockPanel VirtualizingStackPanel.IsVirtualizing="True" VirtualizingStackPanel.VirtualizationMode="Recycling">
-        <!--<StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
-            <Button Click="Small_Click" Content="Small Model"/>
-            <Button Click="Big_Click" Content="Big Model"/>
-        </StackPanel>-->
-        <DockPanel>
+
             <DockPanel DockPanel.Dock="Left">
                 <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
                     <TextBlock Text="TreeList" Margin="0,5,10,0"/>
+                    <Button Click="Toggle_Click_All" Content="Expand ALL from selected"/>
                     <Button Click="Toggle_Click" Content="Expand/Collapse"/>
                     <Button Click="Add_Click" Content="Add Child"/>
                     <!--<Button Click="Remove_Click" Content="Remove"/>-->
                 </StackPanel>
-                <tree:TreeList Name="_treeList" DockPanel.Dock="Left" Width="300"
+                <tree:TreeList Name="_treeList" DockPanel.Dock="Left"
 						   ItemContainerStyle="{StaticResource TreeListItemNodeStyle}">
                     <tree:TreeList.ItemTemplate>
                         <DataTemplate>
@@ -50,26 +47,5 @@
                     </tree:TreeList.ItemTemplate>
                 </tree:TreeList>
             </DockPanel>
-
-            <!--<DockPanel DockPanel.Dock="Left">
-                <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
-                    <TextBlock Text="TreeView" Margin="0,5,10,0"/>
-                </StackPanel>
-                <TreeView Name="_treeView">
-                    <TreeView.ItemContainerStyle>
-                        <Style TargetType="{x:Type TreeViewItem}">
-                            <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
-                            <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
-                        </Style>
-                    </TreeView.ItemContainerStyle>
-
-                    <TreeView.ItemTemplate>
-                        <HierarchicalDataTemplate ItemsSource="{Binding Children}">
-                            <TextBlock Text="{Binding Name}"/>
-                        </HierarchicalDataTemplate>
-                    </TreeView.ItemTemplate>
-                </TreeView>
-            </DockPanel>-->
-        </DockPanel>
     </DockPanel>
 </UserControl>
